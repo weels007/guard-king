@@ -1,0 +1,128 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --bg-color: #000000;
+  --primary-text-color: #95bdc9;
+  --secondary-text-color: #484e58;
+  --glow-color-1: rgba(126, 227, 135, 0.25);
+  --glow-color-2: rgba(150, 230, 160, 0.35);
+  --glow-color-3: rgba(100, 200, 110, 0.2);
+  --line-color: #505050;
+  color-scheme: dark;
+}
+
+@theme {
+  --color-ink: #020608;
+  --color-ink2: #060b10;
+  --color-ink3: #0b1118;
+  --color-parchment: #95bdc9;
+  --color-parchdim: #484e58;
+  --color-seal: #e5484d;
+  --color-sealdeep: #7e2118;
+  --color-pine: #7ee387;
+  --color-pinedeep: #1e4a36;
+  --color-brass: #95bdc9;
+  --color-brassdeep: #3d5a66;
+  --color-sage: #484e58;
+  --color-guard: #7fa8cf;
+
+  --color-primary-text: #95bdc9;
+  --color-secondary-text: #484e58;
+  --color-line: #505050;
+  --color-glow-1: rgba(126, 227, 135, 0.25);
+  --color-glow-2: rgba(150, 230, 160, 0.35);
+  --color-glow-3: rgba(100, 200, 110, 0.2);
+
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--primary-text-color);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ledger rules: hairline rows */
+.ledger-row {
+  border-bottom: 1px solid var(--line-color);
+}
+.ledger-row:last-child {
+  border-bottom: 0;
+}
+
+.brass-frame {
+  border: 1px solid var(--line-color);
+}
+
+.seal-stamp {
+  transform: rotate(-6deg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--glow-color-2);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.rise-in {
+  animation: rise-in 0.45s ease-out both;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.toast-in {
+  animation: toast-in 0.25s ease-out both;
+}
+
+input,
+select,
+textarea {
+  color-scheme: dark;
+}
+
+/* Pointer on every actionable control; honest cursor when disabled. */
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]) {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+a[href] {
+  cursor: pointer;
+}

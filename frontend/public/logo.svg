@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <circle cx="120" cy="120" r="116" fill="#0D1319"/>
+  <path d="M120 18 196 42v62c0 46-31 77-76 98C75 181 44 150 44 104V42l76-24z" fill="none" stroke="#C29B3C" stroke-width="4"/>
+  <path d="M120 34 182 53v51c0 39-26 65-62 83-36-18-62-44-62-83V53l62-19z" fill="none" stroke="#C29B3C" stroke-width="1.5" opacity="0.7"/>
+  <text x="120" y="128" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="72" fill="#ECE7D6">G</text>
+  <text x="120" y="158" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" letter-spacing="5" fill="#C29B3C">GUARDKING</text>
+  <circle cx="120" cy="196" r="3" fill="#AE3226"/>
+</svg>
